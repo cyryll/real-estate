@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
-export const Nav = styled.div `
+export const Nav = styled.nav `
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@ export const Nav = styled.div `
     z-index: 100;
     position: fixed;
     width: 100%;
-    background: red;
+    background: blue;
 `
 
 export const NavLink = css`
@@ -29,7 +29,7 @@ export const MenuBars = styled.i `
 
 `
 export const NavMenu = styled.div `
-    display: felx;
+    display: flex;
     align-items: center;
 `
 export const NavMenuLinks = styled(Link)`

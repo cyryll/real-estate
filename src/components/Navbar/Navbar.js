@@ -1,6 +1,6 @@
 import React from 'react'
 import { menuData } from '../../data/MenuData'
-import { Button } from './Button'
+import { Button } from '../Button'
 import {
     Logo,
     MenuBars,
@@ -23,7 +23,7 @@ const Navbar = () => {
                 ))}
             </NavMenu>
             <NavBtn>
-                <Button to="/contact" primary="true">Contact Us</Button>
+                <Button to="/contact" primary = "true">Contact Us</Button>
             </NavBtn>
         </Nav>
     )
