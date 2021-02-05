@@ -79,7 +79,7 @@ export const HeroContent = styled.div `
 `
 export const Arrow = styled(AiOutlineArrowRight)
 `
-    
+    margin-left: 0.5rem;
 `
 export const arrowButtons = css `
     width: 50px;
