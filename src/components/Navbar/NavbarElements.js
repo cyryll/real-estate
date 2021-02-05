@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-import {FaBars} from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 
 export const Nav = styled.nav `
     height: 60px;
@@ -10,10 +10,9 @@ export const Nav = styled.nav `
     z-index: 100;
     position: fixed;
     width: 100%;
-    background: blue;
 `
 
-export const NavLink = css`
+export const NavLink = css `
     color: #fff;
     display: flex;
     align-items: center;
@@ -22,11 +21,13 @@ export const NavLink = css`
     cursor: pointer;
     text-decoration: none;
 `
-export const Logo = styled(Link)`
+export const Logo = styled(Link)
+`
     ${NavLink}
     font-style: italic;
 `
-export const MenuBars = styled(FaBars) `
+export const MenuBars = styled(FaBars)
+`
     display: none;
 
     @media screen and (max-width: 768px) {
@@ -45,10 +46,11 @@ export const NavMenu = styled.div `
         display: none;
     }
 `
-export const NavMenuLinks = styled(Link)`
+export const NavMenuLinks = styled(Link)
+`
     ${NavLink}
 `
-export const NavBtn = styled.div`
+export const NavBtn = styled.div `
     display: flex;
     align-items: centre;
     margin-right: 24px;

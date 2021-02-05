@@ -1,3 +1,4 @@
+import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import GlobalStyle from "./globalStyles";
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <GlobalStyle />
       <Navbar />
+      <Hero/>
     </>
   );
 }
