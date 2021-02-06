@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { menuData } from '../../data/MenuData'
 import { Button } from '../Button'
+import { animateScroll as scroll } from 'react-scroll'
 import {
     Logo,
     MenuBars,
@@ -10,11 +11,24 @@ import {
     NavMenuLinks
 } from './NavbarElements'
 
-const Navbar = ({toggle}) => {
+const Navbar = ({ toggle }) => {
+    const [scrollNav, setscrollNav] = useState(false)
+    {/* Change NavBar color on scroll*/}
+    const ChangeNav = () => {
+        if (window.scrollY >= 80) {
+            setscrollNav(true)
+        } else {
+            setscrollNav(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', ChangeNav)
+    }, [])
     return (
-        <Nav>
+        <Nav scrollNav={scrollNav}>
             <Logo to="/">POAE</Logo>
-            <MenuBars onClick={toggle}/>
+            <MenuBars onClick={toggle} />
             <NavMenu>
                 {menuData.map((item, index) => (
                     <NavMenuLinks to={item.link} key={index}>
@@ -23,7 +37,7 @@ const Navbar = ({toggle}) => {
                 ))}
             </NavMenu>
             <NavBtn>
-                <Button to="/contact" primary = "true">Contact Us</Button>
+                <Button to="/contact" primary="true">Contact Us</Button>
             </NavBtn>
         </Nav>
     )
