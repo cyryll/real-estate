@@ -34,8 +34,8 @@ export const MenuBars = styled(FaBars)
     @media screen and (max-width: 768px) {
         display: block;
         width: 30px;
-        // height: 30px:
-        // transform: translateY(-50%, 100%)
+        height: 30px:
+        transform: translateY(-50%, 100%)
     }
 `
 export const NavMenu = styled.div `

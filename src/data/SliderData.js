@@ -3,8 +3,7 @@ import ImageTwo from '../images/ImageTwo.jpg'
 import ImageThree from '../images/ImageThree.jpg'
 import ImageFour from '../images/ImageFour.jpg'
 
-export const SliderData = [
-    {
+export const SliderData = [{
         title: "Luxury Villa in Mombasa, Kenya",
         price: 'Ksh 30,500,000',
         path: '/homes',

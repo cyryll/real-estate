@@ -1,8 +1,10 @@
+import Cards from "../components/Cards/Cards"
+
 const Homes = () => {
     return (
-        <div>
-            Homes
-        </div>
+        <>
+        <Cards/>
+        </>
     )
 }
 
