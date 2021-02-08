@@ -7,7 +7,7 @@ export const DropdownContainer = styled.div `
     z-index: 900;
     width: 100%;
     height: 100%;
-    background: #cd853f;
+    background: #956AE1;
     display: grid;
     align-items: center;
     top: ${({isOpen}) => (isOpen ? '0' : '-100%')};

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { menuData } from '../../data/MenuData'
 import { Button } from '../Button'
-import { animateScroll as scroll } from 'react-scroll'
 import {
     Logo,
     MenuBars,
@@ -12,8 +11,8 @@ import {
 } from './NavbarElements'
 
 const Navbar = ({ toggle }) => {
-    const [scrollNav, setscrollNav] = useState(false)
-    {/* Change NavBar color on scroll*/}
+    const [scrollNav, setscrollNav] = useState(false);
+    /* Change NavBar color on scroll*/
     const ChangeNav = () => {
         if (window.scrollY >= 80) {
             setscrollNav(true)

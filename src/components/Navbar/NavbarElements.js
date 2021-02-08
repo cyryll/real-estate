@@ -10,7 +10,7 @@ export const Nav = styled.nav `
     z-index: 100;
     position: fixed;
     width: 100%;
-    background: ${({scrollNav}) => scrollNav ? '#cd853f' : 'trasparent'};
+    background: ${({scrollNav}) => scrollNav ? '#956AE1' : 'trasparent'};
 `
 
 export const NavLink = css `
