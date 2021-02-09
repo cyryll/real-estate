@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar/Navbar";
 import GlobalStyle from "./globalStyles";
 import LandingPage from './pages/LandingPage';
 import Homes from './pages/Homes';
+import About from './pages/About';
+import Rentals from './pages/Rentals';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,6 +25,8 @@ function App() {
       <Switch>
         <Route path="/" exact component = {LandingPage}/>
         <Route path="/homes" component = {Homes}/>
+        <Route path="/about" component = {About}/>
+        <Route path="/rentals" component = {Rentals}/>
       </Switch>
     </>
   );
