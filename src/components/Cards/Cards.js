@@ -15,6 +15,7 @@ import {
 } from "./CardsElements"
 import Img1 from "../../images/ImageFour.jpg"
 import CardItem from "./CardItem"
+import { SliderData } from "../../data/SliderData"
 const Cards = () => {
     return (
         <>
@@ -33,38 +34,26 @@ const Cards = () => {
                 <CardContainer>
                     <CardWrapper>
                         <CardItems>
-                            <CardItem
-                                src={Img1}
-                                text="explore the amazon jungle waterfalls"
-                                label="Adventure"
-                                path="/services"
-                            />
-                            <CardItem
-                                src='images/ImageFour.jpg'
-                                text='Travel through the Islands of Bali in a Private Cruise'
-                                label='Luxury'
-                                path='/services'
-                            />
+                            {SliderData.map((item, index) => (
+                                index <= 1 && <CardItem
+                                    src={item.images}
+                                    text={item.title}
+                                    label={item.label}
+                                    path={item.link}
+                                    key={index}
+                                />
+                            ))}
                         </CardItems>
                         <CardItems>
-                            <CardItem
-                                src='images/ImageFour.jpg'
-                                text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                                label='Mystery'
-                                path='/services'
-                            />
-                            <CardItem
-                                src='images/ImageFour.jpg'
-                                text='Experience Football on Top of the Himilayan Mountains'
-                                label='Adventure'
-                                path='/products'
-                            />
-                            <CardItem
-                                src='images/ImageFour.jpg'
-                                text='Ride through the Sahara Desert on a guided camel tour'
-                                label='Adrenaline'
-                                path='/sign-up'
-                            />
+                            {SliderData.map((item, index) => (
+                                index >= 1 && <CardItem
+                                    src={item.images}
+                                    text={item.title}
+                                    label={item.label}
+                                    path={item.link}
+                                    key={index}
+                                />
+                            ))}
                         </CardItems>
                     </CardWrapper>
                 </CardContainer>
