@@ -13,7 +13,6 @@ import {
     CardWrapper,
     ImageH1
 } from "./CardsElements"
-import Img1 from "../../images/ImageFour.jpg"
 import CardItem from "./CardItem"
 import { SliderData } from "../../data/SliderData"
 const Cards = () => {
