@@ -10,6 +10,7 @@ import LandingPage from './pages/LandingPage';
 import Homes from './pages/Homes';
 import About from './pages/About';
 import Rentals from './pages/Rentals';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -28,6 +29,7 @@ function App() {
         <Route path="/about" component = {About}/>
         <Route path="/rentals" component = {Rentals}/>
       </Switch>
+      <Footer/>
     </>
   );
 }
