@@ -18,16 +18,6 @@ import { SliderData } from "../../data/SliderData"
 const Cards = () => {
     return (
         <>
-            <HeroSection>
-                <HeroWrapper>
-                    <HeroSlide>
-                        <HeroSlider>
-                            <HeroImage src={require('../../images/ImageOne.jpg').default} alt="img" />
-                            <ImageH1>Exporer our Homes</ImageH1>
-                        </HeroSlider>
-                    </HeroSlide>
-                </HeroWrapper>
-            </HeroSection>
             <CardSection>
                 <CardH1>Our Homes</CardH1>
                 <CardContainer>
