@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { SliderData } from "../../data/SliderData"
+import { RentalSliderData } from "../../data/SliderData"
 import { Button } from "../Button"
 import {
     Arrow,
@@ -16,7 +16,7 @@ import {
 
 const RentalHero = () => {
     const [current, setCurrent] = useState(0)
-    const length = SliderData.length
+    const length = RentalSliderData.length
     const timeout = useRef(null)
 
     //Slider animation
@@ -52,14 +52,14 @@ const RentalHero = () => {
     }
 
     //check if data is not an array and return null
-    if (!Array.isArray(SliderData) || SliderData.length <= 0) {
+    if (!Array.isArray(RentalSliderData) || RentalSliderData.length <= 0) {
         return null
     }
     return ( <
         HeroSection >
         <
         HeroWrapper > {
-            SliderData.map((slide, index) => {
+            RentalSliderData.map((slide, index) => {
                 return ( <
                     HeroSlide key = { index } > {
                         index === current && ( <
