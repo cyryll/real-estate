@@ -36,3 +36,37 @@ export const SliderData = [{
         alt: 'House'
     }
 ]
+
+export const RentalSliderData = [{
+        title: "Spacious rentals in Mombasa, Kenya",
+        price: 'Ksh 120,000 per month',
+        path: '/rentals',
+        label: 'View Rental',
+        images: ImageOne,
+        alt: 'House'
+    },
+    {
+        title: " Executive house in Malindi, Kenya",
+        price: 'Ksh 150,000 per month',
+        path: '/rentals',
+        label: 'View Home',
+        images: ImageTwo,
+        alt: 'House'
+    },
+    {
+        title: "House in Westlands, Nairobi",
+        price: 'Ksh 70,000 per month',
+        path: '/rentals',
+        label: 'View House',
+        images: ImageThree,
+        alt: 'House'
+    },
+    {
+        title: "Apartment in Kilimani, Nairobi",
+        price: 'Ksh 135,000 per month',
+        path: '/rentals',
+        label: 'View House',
+        images: ImageFour,
+        alt: 'House'
+    }
+]
