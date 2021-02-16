@@ -1,4 +1,3 @@
-import { InfoData } from '../../data/InfoData'
 import {Button} from '../Button'
 import {
     Container,
