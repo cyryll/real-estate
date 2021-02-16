@@ -7,18 +7,18 @@ import {
     Section
 } from "./InfoElements"
 
-const InfoSection = () => {
+const InfoSection = ({heading, paragraghOne, paragraghTwo, buttonLabel, reverse, image}) => {
     return (
         <Section>
             <Container>
                 <LColumn>
-                    <h1>{InfoData.heading}</h1>
-                    <p>{InfoData.paragraghOne}</p>
-                    <p>{InfoData.paragraghTwo}</p>
-                    <Button primary="true">{InfoData.buttonLabel}</Button>
+                    <h1>{heading}</h1>
+                    <p>{paragraghOne}</p>
+                    <p>{paragraghTwo}</p>
+                    <Button primary="true">{buttonLabel}</Button>
                 </LColumn>
-                <RColumn reverse={InfoData.reverse}>
-                    <img src={InfoData.image} alt="home" />
+                <RColumn reverse={reverse}>
+                    <img src={image} alt="home" />
                 </RColumn>
             </Container>
         </Section>
