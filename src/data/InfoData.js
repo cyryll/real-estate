@@ -6,6 +6,7 @@ export const InfoData = {
     paragraghTwo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper dignissim cras tincidunt lobortis feugiat",
     buttonLabel: 'View Homes',
     image: ImageOne,
+    path: '/homes',
     reverse: false,
     delay: 100
 }
@@ -17,5 +18,6 @@ export const InfoTwo = {
     buttonLabel: 'View Homes',
     image: ImageThree,
     reverse: true,
+    path: '/homes',
     delay: 300
 }
