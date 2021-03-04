@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react'
-import { SliderData } from "../../data/SliderData"
 import { Button } from "../Button"
 import {
     Arrow,
@@ -14,9 +13,9 @@ import {
     SliderButtons
 } from "./HeroElements"
 
-const Hero = () => {
+const Hero = ({slides}) => {
     const [current, setCurrent] = useState(0)
-    const length = SliderData.length
+    const length = slides.length
     const timeout = useRef(null)
 
     //Slider animation
@@ -27,7 +26,7 @@ const Hero = () => {
 
         timeout.current = setTimeout(nextSlide, 3000)
 
-        return function() {
+        return function () {
             if (timeout.current) {
                 clearTimeout(timeout.current)
             }
@@ -52,50 +51,41 @@ const Hero = () => {
     }
 
     //check if data is not an array and return null
-    if (!Array.isArray(SliderData) || SliderData.length <= 0) {
+    if (!Array.isArray(slides) || slides.length <= 0) {
         return null
     }
-    return ( <
-        HeroSection >
-        <
-        HeroWrapper > {
-            SliderData.map((slide, index) => {
-                return ( <
-                    HeroSlide key = { index } > {
-                        index === current && ( <
-                            HeroSlider >
-                            <
-                            HeroImage src = { slide.images }
-                            alt = { slide.alt }
-                            /> <
-                            HeroContent >
-                            <
-                            h1 > { slide.title } < /h1> <
-                            p > { slide.price } < /p> <
-                            Button to = { slide.path }
-                            primary = "true"
-                            css = { `
-                                        max-width: 160px;` } > { slide.label } <
-                            Arrow / >
-                            <
-                            /Button> <
-                            /HeroContent> <
-                            /HeroSlider>
+    return (
+        <HeroSection>
+            <HeroWrapper>
+                {
+                    slides.map((slide, index) => {
+                        return (
+                            <HeroSlide key={index} >
+                                {index == current && (
+                                    <HeroSlider>
+                                        <HeroImage src={slide.images}
+                                            alt={slide.alt} />
+                                        <HeroContent>
+                                            <h1 > {slide.title} </h1>
+                                            <p > {slide.price} </p>
+                                            <Button to={slide.path}
+                                                primary="true"
+                                                css={` max-width: 160px;`} >
+                                                {slide.label} <Arrow />
+                                            </Button>
+                                        </HeroContent>
+                                    </HeroSlider>
+                                )}
+                            </HeroSlide>
                         )
-                    } <
-                    /HeroSlide>
-                )
-            })
-        } <
-        SliderButtons >
-        <
-        PrevArrow onClick = { prevSlide }
-        /> <
-        NextArrow onClick = { nextSlide }
-        /> <
-        /SliderButtons> <
-        /HeroWrapper> <
-        /HeroSection>
+                    })
+                }
+                <SliderButtons>
+                    <PrevArrow onClick={prevSlide} />
+                    <NextArrow onClick={nextSlide} />
+                </SliderButtons>
+            </HeroWrapper>
+        </HeroSection>
     )
 }
 
