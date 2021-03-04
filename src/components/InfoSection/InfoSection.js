@@ -1,4 +1,4 @@
-import {Button} from '../Button'
+import { Button } from '../Button'
 import {
     Container,
     LColumn,
@@ -6,19 +6,20 @@ import {
     Section
 } from "./InfoElements"
 
-const InfoSection = ({heading, paragraghOne, paragraghTwo, buttonLabel, reverse, image,path}) => {
+const InfoSection = ({ heading, paragraghOne, paragraghTwo, buttonLabel, reverse, image, path }) => {
     return (
         <Section>
-            <Container>
+            <Container >
+                <RColumn reverse={reverse}>
+                    <img src={image} alt="home" />
+                </RColumn>
                 <LColumn>
                     <h1>{heading}</h1>
                     <p>{paragraghOne}</p>
                     <p>{paragraghTwo}</p>
-                    <Button primary="true" to = {path}>{buttonLabel}</Button>
+                    <Button primary="true" to={path}>{buttonLabel}</Button>
                 </LColumn>
-                <RColumn reverse={reverse}>
-                    <img src={image} alt="home" />
-                </RColumn>
+
             </Container>
         </Section>
     )
